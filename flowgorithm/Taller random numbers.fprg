@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Taller random numbers"/>
+        <attribute name="authors" value="Lab Programacion"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-30 12:18:55 p.&#8239;m."/>
+        <attribute name="created" value="TGFiIFByb2dyYW1hY2lvbjtFUVVJUE8tMTA3OzIwMjYtMDktMzA7MTA6NTQ6NTcgYS7igK9tLjsxMTg4NQ=="/>
+        <attribute name="edited" value="TGFiIFByb2dyYW1hY2lvbjtFUVVJUE8tMTA3OzIwMjYtMDktMzA7MTI6MTg6NTUgcC7igK9tLjszOzEyMDEw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Dev. Sebastian Felipe Portillo Meneses&#13;&#10;Random numbers and basic math operation"/>
+            <comment text="Step1. Define or declare variables"/>
+            <declare name="num1, num2, add, subs, mult, div" type="Real" array="False" size=""/>
+            <declare name="opt" type="Integer" array="False" size=""/>
+            <comment text="Step2. Initialize"/>
+            <assign variable="num1" expression="0"/>
+            <assign variable="num2" expression="0"/>
+            <assign variable="add" expression="0"/>
+            <assign variable="subs" expression="0"/>
+            <assign variable="mult" expression="0"/>
+            <assign variable="div" expression="0"/>
+            <assign variable="opt" expression="0"/>
+            <comment text="Step3. Get data (inputs)"/>
+            <assign variable="num1" expression="Random(100) + 1"/>
+            <assign variable="num2" expression="Random (100) + 1"/>
+            <output expression="&quot;The random number one is &quot; &amp; num1" newline="True"/>
+            <output expression="&quot;The random number two is &quot; &amp; num2" newline="True"/>
+            <output expression="&quot;Main menu&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot; [1] Addition &quot; &amp; ToChar(13) &amp;&#13;&#10;&quot; [2] substraction &quot; &amp; ToChar(13) &amp;&#13;&#10;&quot; [3] multiplication &quot; &amp; ToChar(13) &amp;&#13;&#10;&quot; [4] division &quot; &amp; ToChar(13) &amp;&#13;&#10;&quot; [5] All operations &quot;" newline="True"/>
+            <output expression="&quot;Press any option&quot;" newline="True"/>
+            <input variable="opt"/>
+            <if expression="opt=1">
+                <then>
+                    <assign variable="add" expression="num1+num2"/>
+                    <output expression="&quot;the addition is &quot; &amp; add" newline="True"/>
+                </then>
+                <else>
+                    <if expression="opt=2">
+                        <then>
+                            <assign variable="subs" expression="num1-num2"/>
+                            <output expression="&quot;The substraction is &quot; &amp; subs" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="opt=3">
+                                <then>
+                                    <assign variable="mult" expression="num1*num2"/>
+                                    <output expression="&quot;The multiplication is &quot; &amp; mult" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="opt=4">
+                                        <then>
+                                            <assign variable="div" expression="num1/num2"/>
+                                            <output expression="&quot;The division is &quot; &amp; div" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="opt=5">
+                                                <then>
+                                                    <assign variable="add" expression="num1+num2"/>
+                                                    <assign variable="subs" expression="num1-num2"/>
+                                                    <assign variable="mult" expression="num1*num2"/>
+                                                    <assign variable="div" expression="num1/num2"/>
+                                                    <output expression="&quot;The all operations are:&quot; &amp; ToChar(13) &amp;&#13;&#10;&quot;Adittion: &quot; &amp; add &amp; ToChar(13) &amp;&#13;&#10;&quot;Substraction: &quot; &amp; subs &amp; ToChar(13) &amp;&#13;&#10;&quot;Multiplication: &quot; &amp; mult &amp; ToChar(13) &amp;&#13;&#10;&quot;Division: &quot; &amp; div" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;invalid option, try again&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <comment text="Step4. Process"/>
+        </body>
+    </function>
+</flowgorithm>
